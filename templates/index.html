@@ -8,7 +8,7 @@
 			background-size: 100% 100%;
 		}
 
-		h1 {
+		h2 {
 			background-color: darkolivegreen;
 			color: white;
 		}
@@ -70,7 +70,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color:aquamarine;
+  background-color:rgb(218, 252, 241);
   color: black;
   text-align: center;
   padding-top: 2rem;
@@ -121,12 +121,12 @@
 	<div class="row">
 
 		<div class="col-2 jumbotron p-2 mx-1">
-			<h1 class="sensor1"> Sensor : </h1>
+			<h2 class="sensor1"> Sensor : </h2>
 		</div>
 		<br>
 
 		<div class="col-4 jumbotron p-2 mx-1">
-			<h1 class="sensor2">Sensor :</h1>
+			<h2 class="sensor2">Sensor :</h2>
 		</div>
 		<br>
 
@@ -182,10 +182,10 @@
 			chartData.series[1].addPoint(data3, true, shiftData);
 
 			$(".sensor1").text("");
-			$(".sensor1").text("Close : " +  data1[1] );
+			$(".sensor1").text("Actual Data: " +  data1[1] );
 
 			$(".sensor2").text("");
-			$(".sensor2").text("Prediction : " +  data3[1] );
+			$(".sensor2").text("Predicted Data : " +  data3[1] );
 
 			// call it again after one second
 			setTimeout(requestData, 1500);
@@ -252,12 +252,12 @@
 			series: [{
 				color:'#00ff00',
 				lineColor: '#00ff00',
-				name: 'Close',
+				name: 'Actual Data',
 				data: []
 			},{
 				color:'#0000FF',
 				lineColor: '#0000FF',
-				name: 'Prediction',
+				name: 'Predicted Data',
 				data: []
 			}]
 		});
